@@ -78,7 +78,7 @@
         line-height: 18px;
         letter-spacing: 6px;
         padding-bottom: 1px;
-        color: #0e1b42 !important;
+        color: black !important;
         border: none;
         display: block;
         /* display:block; */
@@ -103,7 +103,7 @@
         line-height: 18px;
         letter-spacing: 6px;
         padding-bottom: 1px;
-        color: #0e1b42;
+        color: black;
         border: none;
         display: block;
       }
@@ -149,6 +149,21 @@
       input::-webkit-inner-spin-button {
         -webkit-appearance: none;
         margin: 0;
+      }
+
+      ::placeholder {
+        color: black;
+        /* Firefox */
+      }
+
+      :-ms-input-placeholder {
+        /* Internet Explorer 10-11 */
+        color: black;
+      }
+
+      ::-ms-input-placeholder {
+        /* Microsoft Edge */
+        color: black;
       }
 
       /* @supports (-webkit-touch-callout: none) {
