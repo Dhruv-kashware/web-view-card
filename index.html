@@ -17,24 +17,24 @@
       rel="stylesheet"
     />
     <style>
-          :root {
-            font-size: 16px;
-          }
+      :root {
+        font-size: 16px;
+      }
 
-          body {
-            font-family: "Rubik", sans-serif;
-            font-weight: 400;
-            display: flex;
-            flex-direction: column;
-            margin: 0;
-            height: calc(100vh - 30px);
-            background-color: #ffffff;
-          }
-          .main-container {
-            overflow: hidden;
-          }
+      body {
+        font-family: "Rubik", sans-serif;
+        font-weight: 400;
+        display: flex;
+        flex-direction: column;
+        margin: 0;
+        height: calc(100vh - 30px);
+        background-color: #ffffff;
+      }
+      .main-container {
+        overflow: hidden;
+      }
 
-          /*.image-container {
+      /*.image-container {
                 position: relative;
                 background: #424F67;
                 width: 100%;
@@ -57,230 +57,222 @@
                 height: 80%;
             }*/
 
-          .card-details {
-            position: relative;
-            padding: 5px 5px;
-          }
+      .card-details {
+        position: relative;
+        padding: 5px 5px;
+      }
 
-          /* .cardnumber{
+      /* .cardnumber{
                 color: #0E1B42 !important;
             } */
 
-          .expiryDate {
-            width: 60%;
-            position: relative;
-            background: transparent;
-            height: calc();
-            font-style: normal;
-            font-family: "Rubik", sans-serif;
-            font-size: 4vw;
-            font-weight: 800;
-            line-height: 18px;
-            letter-spacing: 6px;
-            padding-bottom: 1px;
-            color: black !important;
-            border: none;
-            display: block;
-            /* display:block; */
-          }
+      .expiryDate {
+        width: 60%;
+        position: relative;
+        background: transparent;
+        height: calc();
+        font-style: normal;
+        font-family: "Rubik", sans-serif;
+        font-size: 4vw;
+        font-weight: 800;
+        line-height: 18px;
+        letter-spacing: 6px;
+        padding-bottom: 1px;
+        color: #0e1842;
+        border: none;
+        display: block;
+        /* display:block; */
+      }
 
-          .end-container {
-            display: flex;
-            flex-direction: row;
-            padding-bottom: 10px;
-          }
+      .end-container {
+        display: flex;
+        flex-direction: row;
+        padding-bottom: 10px;
+      }
 
-          .cvv {
-            width: 60%;
-            position: relative;
-            background: transparent;
-            box-sizing: border-box;
-            height: calc();
-            font-style: normal;
-            font-family: "Rubik", sans-serif;
-            font-size: 4vw;
-            font-weight: 800;
-            line-height: 18px;
-            letter-spacing: 6px;
-            padding-bottom: 1px;
-            color: black;
-            border: none;
-            display: block;
-          }
+      .cvv {
+        width: 60%;
+        position: relative;
+        background: transparent;
+        box-sizing: border-box;
+        height: calc();
+        font-style: normal;
+        font-family: "Rubik", sans-serif;
+        font-size: 4vw;
+        font-weight: 800;
+        line-height: 18px;
+        letter-spacing: 6px;
+        padding-bottom: 1px;
+        color: #0e1842;
+        border: none;
+        display: block;
+      }
 
-          img {
-            float: right;
-            width: 18vw;
-          }
+      img {
+        float: right;
+        width: 18vw;
+      }
 
-          small:hover,
-          .card-details > img:hover,
-          .card-cvv > img:hover,
-          .card-expiry > img:hover,
-          .item-cross {
-            cursor: pointer;
-          }
+      small:hover,
+      .card-details > img:hover,
+      .card-cvv > img:hover,
+      .card-expiry > img:hover,
+      .item-cross {
+        cursor: pointer;
+      }
 
-          .card-expiry,
-          .card-cvv {
-            width: 50%;
-            position: relative;
-          }
-          /*.card-cvv{
+      .card-expiry,
+      .card-cvv {
+        width: 50%;
+        position: relative;
+      }
+      /*.card-cvv{
       	width: 10%;
                 position: relative;
       	float:right;
 
       }*/
 
-          input {
-            display: block;
-            height: calc();
-            color: black;
-            background-color: transparent;
-            resize: vertical;
-            font-size: 5vw;
-            font-family: "Rubik", sans-serif;
-            border: none;
-            font-weight: 600;
-          }
+      input {
+        display: block;
+        height: calc();
+        color: #0e1842;
+        background-color: transparent;
+        resize: vertical;
+        font-size: 5vw;
+        font-family: "Rubik", sans-serif;
+        border: none;
+        font-weight: 600;
+      }
 
-          input::-webkit-outer-spin-button,
-          input::-webkit-inner-spin-button {
-            -webkit-appearance: none;
-            margin: 0;
-          }
+      input::-webkit-outer-spin-button,
+      input::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+      }
 
-          ::placeholder {
-            color: black;
-            /* Firefox */
-          }
+      ::placeholder {
+        color: #0e1842;
+        /* Firefox */
+      }
 
-          :-ms-input-placeholder {
-            /* Internet Explorer 10-11 */
-            color: black;
-          }
+      :-ms-input-placeholder {
+        /* Internet Explorer 10-11 */
+        color: #0e1842;
+      }
 
-          ::-ms-input-placeholder {
-            /* Microsoft Edge */
-            color: black;
-          }
+      ::-ms-input-placeholder {
+        /* Microsoft Edge */
+        color: #0e1842;
+      }
 
-          /* input:disabled,
-          textarea:disabled,
-          input:disabled::placeholder,
-          textarea:disabled::placeholder {
-            -webkit-text-fill-color: currentcolor; /* 1. sets text fill to current `color` for safari */
-            opacity: 2; /* 2. correct opacity on iOS */
-          } */
-
-          /* @supports (-webkit-touch-callout: none) {
+      /* @supports (-webkit-touch-callout: none) {
             input {
               color: #0e1b42;
             }
           } */
 
-          @media all and (min-width: 769px) and (max-width: 1200px) {
-            .image-container {
-              height: 70vh;
-            }
-            /*.card-image {
+      @media all and (min-width: 769px) and (max-width: 1200px) {
+        .image-container {
+          height: 70vh;
+        }
+        /*.card-image {
                     height: 80%;
                 }*/
-            .counter-container {
-              position: relative;
-            }
-            /*.details-container{
+        .counter-container {
+          position: relative;
+        }
+        /*.details-container{
                     padding: 25px 10px;
                 }*/
-          }
+      }
 
-          @media all and (min-width: 577px) and (max-width: 768px) {
-            .image-container {
-              height: 60vh;
-            }
-            /*.card-image {
+      @media all and (min-width: 577px) and (max-width: 768px) {
+        .image-container {
+          height: 60vh;
+        }
+        /*.card-image {
                     height: 80%;
                 }*/
-            .counter-container {
-              position: fixed;
-            }
-            /*.details-container{
+        .counter-container {
+          position: fixed;
+        }
+        /*.details-container{
                     padding: 20px 10px;
                 }*/
-          }
+      }
 
-          @media all and (max-width: 576px) {
-            .image-container {
-              height: 40vh;
-            }
-            /*.card-image {
+      @media all and (max-width: 576px) {
+        .image-container {
+          height: 40vh;
+        }
+        /*.card-image {
                     height: 80%;
                 }*/
-            .counter-container {
-              position: fixed;
-            }
-            /*.details-container{
+        .counter-container {
+          position: fixed;
+        }
+        /*.details-container{
                     padding: 25px 10px;
                 }*/
-          }
+      }
 
-          @media all and (max-width: 300px) {
-            /*.details-container {
+      @media all and (max-width: 300px) {
+        /*.details-container {
                     padding: 20px 10px;
                 }*/
-            .counter-container {
-              position: relative;
-            }
-          }
+        .counter-container {
+          position: relative;
+        }
+      }
 
-          label {
-            padding-top: 1px;
-            display: inline-block;
-            font-size: 10px;
-            font-weight: 400;
-            line-height: 18px;
-            margin-bottom: 3px;
-            color: #8f93a5;
-            /* 8F93A5 */
-          }
+      label {
+        padding-top: 1px;
+        display: inline-block;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 18px;
+        margin-bottom: 3px;
+        color: #8f93a5;
+        /* 8F93A5 */
+      }
 
-          .copy {
-            position: relative;
-            float: right;
-            right: 5px;
-            top: 26px;
-          }
+      .copy {
+        position: relative;
+        float: right;
+        right: 5px;
+        top: 26px;
+      }
 
-          .copy img {
-            width: 20vw;
-            max-width: 150px;
-          }
+      .copy img {
+        width: 20vw;
+        max-width: 150px;
+      }
 
-          .cvv-lock {
-            position: absolute;
-            float: right;
-            right: 5px;
-            top: 26px;
-          }
+      .cvv-lock {
+        position: absolute;
+        float: right;
+        right: 5px;
+        top: 26px;
+      }
 
-          .cvv-lock img {
-            width: 20vw;
-            max-width: 150px;
-          }
+      .cvv-lock img {
+        width: 20vw;
+        max-width: 150px;
+      }
 
-          .counter-container {
-            position: fixed;
-            bottom: 0;
-            width: 100%;
-            text-align: center;
-            /*height: 30px;*/
-            color: rgba(0, 0, 0, 0.56);
-            font-size: 12px;
-            line-height: 30px;
-            border-top: 1px solid rgba(0, 0, 0, 0.12);
-            background: #f6f6f6;
-          }
+      .counter-container {
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        text-align: center;
+        /*height: 30px;*/
+        color: rgba(0, 0, 0, 0.56);
+        font-size: 12px;
+        line-height: 30px;
+        border-top: 1px solid rgba(0, 0, 0, 0.12);
+        background: #f6f6f6;
+      }
     </style>
   </head>
   <body>
