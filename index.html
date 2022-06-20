@@ -145,19 +145,18 @@
         font-weight: 600;
       }
 
-      
       input::-webkit-outer-spin-button,
       input::-webkit-inner-spin-button {
-          -webkit-appearance: none;
-          margin: 0;
+        -webkit-appearance: none;
+        margin: 0;
+      }
+
+      @supports (-webkit-touch-callout: none) {
+        input {
+          color: #0e1b42;
         }
-        
-        @supports (-webkit-touch-callout: none) {
-          input {
-            color: #0e1b42;
-          }
-        }
-        
+      }
+
       @media all and (min-width: 769px) and (max-width: 1200px) {
         .image-container {
           height: 70vh;
@@ -227,7 +226,7 @@
         position: relative;
         float: right;
         right: 5px;
-        top: 25px;
+        top: 26px;
       }
 
       .copy img {
