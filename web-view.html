@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://cdn.lr-in.com/LogRocket.min.js" crossorigin="anonymous"></script>
+    <script>window.LogRocket && window.LogRocket.init('ioi7dh/sample');</script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Virtual Card Design</title>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <style>
+        :root{
+            font-size: 16px;
+        }
+
+        body {
+            font-family: "Rubik", sans-serif;
+			font-weight: 400;
+            display: flex;
+            flex-direction: column;
+            margin: 0;
+            height: calc(100vh - 30px);
+            background-color: #FFFFFF;
+
+			
+        }
+		.main-container{
+			overflow: hidden;
+		}
+
+        /*.image-container {
+            position: relative;
+            background: #424F67;
+            width: 100%;
+            height: 50vh;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            border-bottom-right-radius: 65px;
+            border-bottom-left-radius: 65px;
+        }
+
+        .item-cross {
+            position: absolute;
+            right: 10px;
+            top: 10px;
+        }
+
+        .card-image {
+            height: 80%;
+        }*/
+
+        .card-details {
+            position: relative;
+            padding: 5px 5px;
+        }
+
+        .cardnumber{
+            color: #0E1B42;
+        }
+
+        .expiryDate {
+            width: 60%;
+            position: relative;
+            background: transparent;
+            height: calc();
+            font-style: normal;
+			font-family: "Rubik", sans-serif;
+            font-size: 4vw;
+            font-weight: 800;
+            line-height: 18px;
+            letter-spacing: 6px;
+            padding-bottom: 1px;
+            color: #0E1B42 !important;
+			border: none;
+            display:block;
+            /* display:block; */
+        }
+
+        .end-container {
+            display: flex;
+            flex-direction: row;
+            padding-bottom: 10px;
+        }
+
+        .cvv {
+            width: 60%;
+            position: relative;
+            background: transparent;
+            box-sizing: border-box;
+            height: calc();
+            font-style: normal;
+			font-family: "Rubik", sans-serif;
+            font-size: 4vw;
+            font-weight: 800;
+            line-height: 18px;
+            letter-spacing: 6px;
+            padding-bottom: 1px;
+            color: #0E1B42;
+			border: none;
+            display:block;
+        }
+
+        img {
+            float: right;
+			width: 18vw;
+        }
+
+        small:hover, .card-details > img:hover, .card-cvv > img:hover, .card-expiry > img:hover, .item-cross {
+            cursor: pointer;
+        }
+
+
+        .card-expiry, .card-cvv{
+            width: 50%;
+            position: relative;
+        }
+		/*.card-cvv{
+			width: 10%;
+            position: relative;
+			float:right;
+			
+		}*/
+
+        input {
+            display: block;
+            height: calc();
+            color: #0E1B42 !important;
+			background-color: transparent;
+            resize: vertical;
+            font-size: 5vw;
+			font-family: "Rubik", sans-serif;
+			border: none;
+            font-weight: 600;
+        }
+
+        input::-webkit-outer-spin-button,
+        input::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+
+        @media all and (min-width: 769px) and (max-width: 1200px) {
+            .image-container {
+                height: 70vh;
+            }
+            /*.card-image {
+                height: 80%;
+            }*/
+            .counter-container{
+                position: relative;
+            }
+            /*.details-container{
+                padding: 25px 10px;
+            }*/
+        }
+
+        @media all and (min-width: 577px) and (max-width: 768px) {
+            .image-container {
+                height: 60vh;
+            }
+            /*.card-image {
+                height: 80%;
+            }*/
+            .counter-container{
+                position: fixed;
+            }
+            /*.details-container{
+                padding: 20px 10px;
+            }*/
+        }
+
+        @media all and (max-width: 576px) {
+            .image-container {
+                height: 40vh;
+            }
+            /*.card-image {
+                height: 80%;
+            }*/
+            .counter-container{
+                position: fixed;
+            }
+            /*.details-container{
+                padding: 25px 10px;
+            }*/
+        }
+
+        @media all and (max-width: 300px) {
+            /*.details-container {
+                padding: 20px 10px;
+            }*/
+            .counter-container{
+                position: relative;
+            }
+        }
+
+        label{
+            padding-top: 1px;
+            display: inline-block;
+            font-size: 10px;
+            font-weight: 400;
+            line-height: 18px;
+            margin-bottom: 3px;
+            color:  #8F93A5;
+        }
+
+        .copy{
+            position: relative;
+            float:right;
+            right: 5px;
+            top:25px;
+        }
+
+        .copy img{
+            width: 20vw;
+            max-width: 150px;
+        }
+
+        .cvv-lock{
+            position: absolute;
+            float:right;
+            right: 5px;
+            top:26px;
+        }
+
+        .cvv-lock img{
+            width: 20vw;
+            max-width: 150px;
+        }
+
+        .counter-container {
+			position:fixed;
+            bottom: 0;
+            width: 100%;
+            text-align: center;
+            /*height: 30px;*/
+            color: rgba(0, 0, 0, 0.56);
+            font-size: 12px;
+            line-height: 30px;
+            border-top: 1px solid rgba(0, 0, 0, 0.12);
+            background: #f6f6f6;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="main-container">
+<!--        <div class="image-container">-->
+<!--            <a href="javascript:closeIt()" class="item-cross"><img src="https://yap-assets.yappay.in/images/crossbar1x.png" alt="close"></a>-->
+<!--            <img src="{{bankLogo}}" alt="Card Image" class="card-image">-->
+<!--        </div>-->
+        <div class="details-container">
+            <div class="cardnumber-container card-details">
+                <label for="cardnumber">card number</label>
+                <a href="javascript:copyTextFromElement('cardNumber')" class="copy"><img src= "https://slaypay-asset.s3.ap-south-1.amazonaws.com/copybutton1.png" alt="copy" ></a>
+                <input type="text" id="cardNumberLock" class="cardnumber textbox" name="cardnumber" placeholder="Card Number" value="6789567891234567" style="display: none" onkeypress="return isNumber(event)"  disabled>
+                <input type="text" id="cardNumber" class="cardnumber textbox" name="cardnumber" placeholder="Card Number" value="6789567891234567" onkeypress="return isNumber(event)"  disabled>
+            </div>
+<!--            <div class="username-container card-details">-->
+<!--                <label for="username">Name on Card</label>-->
+<!--                <a href="javascript:copyTextFromElement('cardHolderName')" class="copy" href="#"><img src="https://yap-assets.yappay.in/images/copy-icon1x.png" alt="copy"></a>-->
+<!--               -->
+<!--                <small class="copy-text">Copy</small>-->
+<!--                <input type="text" id="cardHolderName" class="username textbox" name="Card Holder" placeholder="Card Holder" value="{{nameOnCard}}" disabled>-->
+<!--            </div>-->
+            <div class="end-container card-details">
+                <div class="card-expiry" style="padding-right: 20px;">
+                    <label for="expiryDate">expiry</label>
+                    <input type="text" id="expiryDateLock" class="expiryDate" placeholder="****" disabled>
+                    <input type="text" id="expiryDate" class="expiryDate" name="expiryDate" placeholder="MM/YY" value="12/23" style="display: none" onkeypress="return isNumber(event)" disabled>
+                </div>
+                <div class="card-cvv">
+                    <label for="cvv">cvv</label>
+                    <!--<a href="javascript:copyTextFromElement('cvvLock')" class="copy-cvv" id="lockView"><img src="images/copy1x.png" alt="copy"></a>-->
+                    <!--<a href="javascript:copyTextFromElement('cvvUnlock')" class="copy-cvv" id="unlockView" style="display: none"><img src="images/copy-icon1x.png" alt="copy"></a>-->
+                    <a href="javascript:lockView()" class="cvv-lock" id="lock"><img src="https://slaypay-asset.s3.ap-south-1.amazonaws.com/showbutton1.png" alt="Lock Image"></a>
+                    <a href="javascript:unlockView()" class="cvv-lock" id="unLock" style="display: none"><img src="https://slaypay-asset.s3.ap-south-1.amazonaws.com/hidebutton1.png" alt="Un-Lock Image"></a>
+                    <input type="text" id="cvvLock" class="cvv" name="cvv" placeholder="***" disabled>
+                    <input type="text" id="cvvUnlock" class="cvv" name="CVV" value="234" style="display: none" onkeypress="return isNumber(event)" disabled>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<!--<footer class="counter-container">
+    This screen will automatically close in <span class="counter" id="countDownSec">{{timeOut}}</span> seconds
+</footer>!-->
+</html>
+<script src="https://cdn.jsdelivr.net/clipboard.js/1.5.12/clipboard.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script type="text/javascript">
+    
+    var numArray =  document.getElementById('cardNumber').getAttribute("value").split(``).map(x => +x);
+    document.getElementById("cardNumber").value =  convertToString(sliceInChunks(numArray));
+
+    //Number Validation
+    function isNumber(evt) {
+        evt = (evt) ? evt : window.event;
+        var charCode = (evt.which) ? evt.which : evt.keyCode;
+        if (charCode > 31 && (charCode < 48 || charCode > 57)) {
+            return false;
+        }
+        return true;
+    }
+    //Timer Process
+    let timeOutFunction;
+    let countDownTimer;
+    let setCountDown = function () {
+		var timeOut = '{{timeOut}}';
+        document.getElementById("countDownSec").innerHTML = timeOut;
+		//let countDownSeconds = timeOut;
+        if (countDownTimer) {
+            clearInterval(countDownTimer);
+        }
+        countDownTimer = setInterval(function () {
+            document.getElementById("countDownSec").innerHTML = timeOut--;
+            if (timeOut <= 0) {
+                clearInterval(countDownTimer);
+				closeIt();
+            }
+        }, 1000);
+    };
+
+    
+    function sliceInChunks(arr) {
+    
+    const result = [];
+    for (let i = 0; i < arr.length; i += 4) {
+        const newArr = arr.slice(i, i + 4);
+        result.push(newArr);
+    }
+    return result;
+}
+
+    function convertToString(arr){
+    var ans = "";
+    for(var i = 0 ; i < arr.length ; i++){
+        for(var j = 0 ; j < arr[i].length ; j++){
+            ans = ans + arr[i][j];
+        }
+        ans = ans + "  ";
+    }
+    console.log(ans);
+    return ans;
+}
+function convertToStringWithStar(arr){
+    var ans = "";
+    for(var i = 0 ; i < arr.length ; i++){
+        for(var j = 0 ; j < arr[i].length ; j++){
+            if(i === 1 || i===2 ){
+                ans = ans + "*";
+            }else{
+                ans = ans + arr[i][j];
+            }
+        }
+        ans = ans + "    ";
+    }
+    return ans;
+}
+
+    if (timeOutFunction) {
+        clearTimeout(timeOutFunction);
+    }
+    setCountDown();
+    //Lock Function
+ 
+
+
+    function lockView() {
+        let numArray =  document.getElementById('cardNumber').getAttribute("value").split(``).map(x => +x);
+        
+
+        // document.getElementById("cardNumberLock").value =document.getElementById('cardNumber').getAttribute("value").split(``).map(x => +x).fill(`*`, 4, 12).join("");
+        document.getElementById("cardNumberLock").value =  convertToStringWithStar( sliceInChunks(numArray));
+        document.getElementById('unLock').style.display = "block";
+        document.getElementById('lock').style.display = "none";
+        //document.getElementById('lockView').style.display = "none";
+        //document.getElementById('unlockView').style.display = "block";
+        document.getElementById('cvvUnlock').style.display = "block";
+        document.getElementById('cvvLock').style.display = "none";
+        document.getElementById('expiryDateLock').style.display = "none";
+        document.getElementById('expiryDate').style.display = "block";
+        document.getElementById('cardNumberLock').style.display = "block";
+        document.getElementById('cardNumber').style.display = "none";
+        
+       
+    }
+    //Un Lock Function
+    function unlockView() {
+
+        let numArray =  document.getElementById('cardNumber').getAttribute("value").split(``).map(x => +x);
+        
+        document.getElementById("cardNumber").value =  convertToString(sliceInChunks(numArray));
+
+        document.getElementById('unLock').style.display = "none";
+        document.getElementById('lock').style.display = "block";
+        //document.getElementById('lockView').style.display = "block";
+        //document.getElementById('unlockView').style.display = "none";
+        document.getElementById('cvvUnlock').style.display = "none";
+        document.getElementById('cvvLock').style.display = "block";
+        document.getElementById('expiryDateLock').style.display = "block";
+        document.getElementById('expiryDate').style.display = "none";
+        document.getElementById('cardNumberLock').style.display = "none";
+        document.getElementById('cardNumber').style.display = "block";
+    }
+    //Copy Method
+    function copyTextFromElement(elementID) {
+        let element = document.getElementById(elementID); //select the element
+        let elementText = element.getAttribute("value"); //get the text content from the element
+        console.log(elementText)
+        copyText(elementText); //use the copyText function below
+        
+    }
+    //Copy Function
+    function copyText(text) {
+        // navigator.clipboard.writeText(document.getElementsById("cardnumber").getAttribute("value"));
+        navigator.clipboard.writeText(text);
+    }
+    
+    
+    
+    
+    //Close Function
+    function  closeIt() {
+		if('{{callBackFlag}}' !== 'N'){
+                console.log("call back url disabled:::");
+                window.location.href='{{callbackUrl}}';
+            }else{
+                console.log("close event triggerd");
+                var xhttp = new XMLHttpRequest();
+                xhttp.open("GET", '{{callbackUrl}}', true);
+                xhttp.send();
+                window.location.reload();
+            }
+    }
+
+    // document.getElementById('cvvLock').click(function () {
+    //     document.getElementById('unLock').style.display = "block";
+    //     document.getElementById('lock').style.display = "none";
+    //     //document.getElementById('lockView').style.display = "none";
+    //     //document.getElementById('unlockView').style.display = "block";
+    //     document.getElementById('cvvUnlock').style.display = "block";
+    //     document.getElementById('cvvLock').style.display = "none";
+    //     document.getElementById('expiryDate').style.display = "block";
+    //     document.getElementById('expiryDateLock').style.display = "none";
+    // });
+
+</script>
