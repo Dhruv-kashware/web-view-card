@@ -30,10 +30,7 @@
         height: calc(100vh - 30px);
         background-color: #ffffff;
       }
-      .main-container {
-        overflow: hidden;
-      }
-
+      
       /*.image-container {
                 position: relative;
                 background: #424F67;
@@ -60,26 +57,26 @@
       .card-details {
         position: relative;
         padding: 5px 5px;
-        z-index: 4;
+     
       }
 
       .cardnumber {
-        overflow: hidden;
+        /* overflow: hidden; */
         margin-left: -1.5px;
-        letter-spacing: 0.6px;
+        letter-spacing: 1px;
       }
 
       /* #cardNumberLock {
       } */
 
       .expiryDate {
-        width: 60%;
+        width: 100%;
         position: relative;
         background: transparent;
         height: calc();
         font-style: normal;
         font-family: "Rubik", sans-serif;
-        font-size: 4vw;
+        font-size: 5vw;
         font-weight: 800;
         line-height: 18px;
         letter-spacing: 6px;
@@ -104,7 +101,7 @@
         height: calc();
         font-style: normal;
         font-family: "Rubik", sans-serif;
-        font-size: 4vw;
+        font-size: 5vw;
         font-weight: 800;
         line-height: 18px;
         letter-spacing: 6px;
@@ -141,6 +138,7 @@
 
       input {
         /* max-width: 120vw; */
+        width: 100%;
         display: block;
         height: calc();
         color: #0e1842;
@@ -448,7 +446,7 @@
       for (var j = 0; j < arr[i].length; j++) {
         ans = ans + arr[i][j];
       }
-      ans = ans + " ";
+      ans = ans + "  ";
     }
     console.log(ans);
     return ans;
@@ -463,7 +461,7 @@
           ans = ans + arr[i][j];
         }
       }
-      ans = ans + "  ";
+      ans = ans + "   ";
     }
     return ans;
   }
