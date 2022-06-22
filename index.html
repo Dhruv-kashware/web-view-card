@@ -30,7 +30,7 @@
         height: calc(100vh - 30px);
         background-color: #ffffff;
       }
-      
+
       /*.image-container {
                 position: relative;
                 background: #424F67;
@@ -57,7 +57,6 @@
       .card-details {
         position: relative;
         padding: 5px 5px;
-     
       }
 
       .cardnumber {
@@ -450,9 +449,10 @@
       for (var j = 0; j < arr[i].length; j++) {
         ans = ans + arr[i][j];
       }
-      ans = ans + "  ";
+      if (i < 3) {
+        ans = ans + " ";
+      }
     }
-    console.log(ans);
     return ans;
   }
   function convertToStringWithStar(arr) {
@@ -465,7 +465,9 @@
           ans = ans + arr[i][j];
         }
       }
-      ans = ans + "   ";
+      if (i < 3) {
+        ans = ans + " ";
+      }
     }
     return ans;
   }
