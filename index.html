@@ -30,29 +30,36 @@
         height: calc(100vh - 30px);
         background-color: #ffffff;
       }
+      .main-container {
+        overflow: hidden;
+      }
+
+      .details-container{
+                padding: 0px 13px;
+            }
 
       /*.image-container {
-                position: relative;
-                background: #424F67;
-                width: 100%;
-                height: 50vh;
-                display: flex;
-                flex-direction: row;
-                justify-content: center;
-                align-items: center;
-                border-bottom-right-radius: 65px;
-                border-bottom-left-radius: 65px;
-            }
+            position: relative;
+            background: #424F67;
+            width: 100%;
+            height: 50vh;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            border-bottom-right-radius: 65px;
+            border-bottom-left-radius: 65px;
+        }
 
-            .item-cross {
-                position: absolute;
-                right: 10px;
-                top: 10px;
-            }
+        .item-cross {
+            position: absolute;
+            right: 10px;
+            top: 10px;
+        }
 
-            .card-image {
-                height: 80%;
-            }*/
+        .card-image {
+            height: 80%;
+        }*/
 
       .card-details {
         position: relative;
@@ -60,27 +67,22 @@
       }
 
       .cardnumber {
-        /* overflow: hidden; */
-        margin-left: -1.5px;
-        letter-spacing: 1px;
+        color: #0e1b42;
       }
 
-      /* #cardNumberLock {
-      } */
-
       .expiryDate {
-        width: 100%;
+        width: 60%;
         position: relative;
         background: transparent;
         height: calc();
         font-style: normal;
         font-family: "Rubik", sans-serif;
-        font-size: 5vw;
+        font-size: 4vw;
         font-weight: 600;
         line-height: 18px;
         letter-spacing: 6px;
         padding-bottom: 1px;
-        color: #0e1842;
+        color: #0e1b42 !important;
         border: none;
         display: block;
         /* display:block; */
@@ -100,12 +102,12 @@
         height: calc();
         font-style: normal;
         font-family: "Rubik", sans-serif;
-        font-size: 5vw;
+        font-size: 4vw;
         font-weight: 600;
         line-height: 18px;
         letter-spacing: 6px;
         padding-bottom: 1px;
-        color: #0e1842;
+        color: #0e1b42;
         border: none;
         display: block;
       }
@@ -127,24 +129,18 @@
       .card-cvv {
         width: 50%;
         position: relative;
-        display: flex;
-        flex-direction: column;
-        justify-content: start;
-        align-content: flex-start;
       }
       /*.card-cvv{
-      	width: 10%;
-                position: relative;
-      	float:right;
-
-      }*/
+			width: 10%;
+            position: relative;
+			float:right;
+			
+		}*/
 
       input {
-        /* max-width: 120vw; */
-        width: 100%;
         display: block;
         height: calc();
-        color: #0e1842;
+        color: #0e1b42 !important;
         background-color: transparent;
         resize: vertical;
         font-size: 5vw;
@@ -153,46 +149,27 @@
         font-weight: 600;
       }
 
+      ::placeholder {
+        color: #0e1b42;
+        opacity: 1;
+      }
       input::-webkit-outer-spin-button,
       input::-webkit-inner-spin-button {
         -webkit-appearance: none;
         margin: 0;
       }
 
-      ::placeholder {
-        color: #0e1842;
-        /* Firefox */
-      }
-
-      :-ms-input-placeholder {
-        /* Internet Explorer 10-11 */
-        color: #0e1842;
-      }
-
-      ::-ms-input-placeholder {
-        /* Microsoft Edge */
-        color: #0e1842;
-      }
-
-      /* @supports (-webkit-touch-callout: none) {
-            input {
-              color: #0e1b42;
-            }
-          } */
-
       @media all and (min-width: 769px) and (max-width: 1200px) {
         .image-container {
           height: 70vh;
         }
         /*.card-image {
-                    height: 80%;
-                }*/
+                height: 80%;
+            }*/
         .counter-container {
           position: relative;
         }
-        /*.details-container{
-                    padding: 25px 10px;
-                }*/
+        
       }
 
       @media all and (min-width: 577px) and (max-width: 768px) {
@@ -200,14 +177,14 @@
           height: 60vh;
         }
         /*.card-image {
-                    height: 80%;
-                }*/
+                height: 80%;
+            }*/
         .counter-container {
           position: fixed;
         }
         /*.details-container{
-                    padding: 20px 10px;
-                }*/
+                padding: 20px 10px;
+            }*/
       }
 
       @media all and (max-width: 576px) {
@@ -215,58 +192,56 @@
           height: 40vh;
         }
         /*.card-image {
-                    height: 80%;
-                }*/
+                height: 80%;
+            }*/
         .counter-container {
           position: fixed;
         }
         /*.details-container{
-                    padding: 25px 10px;
-                }*/
+                padding: 25px 10px;
+            }*/
       }
 
       @media all and (max-width: 300px) {
         /*.details-container {
-                    padding: 20px 10px;
-                }*/
+                padding: 20px 10px;
+            }*/
         .counter-container {
           position: relative;
         }
       }
 
       label {
-        padding-left: 5px;
-        padding-top: 3px;
+        padding-top: 1px;
         display: inline-block;
-        font-size: 16px;
+        font-size: 14px;
         font-weight: 400;
         line-height: 18px;
         margin-bottom: 3px;
         color: #8f93a5;
-        /* 8F93A5 */
       }
 
       .copy {
         position: relative;
         float: right;
         right: 5px;
-        top: 26px;
+        top: 25px;
       }
 
       .copy img {
-        width: 20vw;
-        /* max-width: 150px; */
+        width: 17.5vw;
+        max-width: 150px;
       }
 
       .cvv-lock {
         position: absolute;
         float: right;
         right: 5px;
-        top: 26px;
+        top: 21px;
       }
 
       .cvv-lock img {
-        width: 20vw;
+        width: 18vw;
         max-width: 150px;
       }
 
@@ -304,10 +279,10 @@
             class="cardnumber textbox"
             name="cardnumber"
             placeholder="Card Number"
-            value="{{spaceCardNumber}}"
+            value="1234567891234567"
             style="display: none"
             onkeypress="return isNumber(event)"
-            readonly="readonly"
+            disabled
           />
           <input
             type="text"
@@ -315,9 +290,9 @@
             class="cardnumber textbox"
             name="cardnumber"
             placeholder="Card Number"
-            value="{{spaceCardNumber}}"
+            value="5086371400000452"
             onkeypress="return isNumber(event)"
-            readonly="readonly"
+            disabled
           />
         </div>
         <!--            <div class="username-container card-details">-->
@@ -335,7 +310,7 @@
               id="expiryDateLock"
               class="expiryDate"
               placeholder="****"
-              readonly="readonly"
+              disabled
             />
             <input
               type="text"
@@ -346,7 +321,7 @@
               value="{{modifiedExpiryDate}}"
               style="display: none"
               onkeypress="return isNumber(event)"
-              readonly="readonly"
+              disabled
             />
           </div>
           <div class="card-cvv">
@@ -373,7 +348,7 @@
               class="cvv"
               name="cvv"
               placeholder="***"
-              readonly="readonly"
+              disabled
             />
             <input
               type="text"
@@ -383,7 +358,7 @@
               value="{{cvv}}"
               style="display: none"
               onkeypress="return isNumber(event)"
-              readonly="readonly"
+              disabled
             />
           </div>
         </div>
@@ -397,14 +372,12 @@
 <script src="https://cdn.jsdelivr.net/clipboard.js/1.5.12/clipboard.min.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 <script type="text/javascript">
-  var numArray = document
-    .getElementById("cardNumber")
-    .getAttribute("value")
-    .split(``)
-    .map((x) => +x);
-  document.getElementById("cardNumber").value = convertToString(
-    sliceInChunks(numArray)
-  );
+
+var saj = "{{spaceCardNumber}}";
+var index = 5;
+var sajn = saj.substring(0, index) + '**** **** ' + saj.substring(index + 10);
+document.getElementById('cardNumberLock').value=sajn;
+
 
   //Number Validation
   function isNumber(evt) {
@@ -434,44 +407,6 @@
     }, 1000);
   };
 
-  function sliceInChunks(arr) {
-    const result = [];
-    for (let i = 0; i < arr.length; i += 4) {
-      const newArr = arr.slice(i, i + 4);
-      result.push(newArr);
-    }
-    return result;
-  }
-
-  function convertToString(arr) {
-    var ans = "";
-    for (var i = 0; i < arr.length; i++) {
-      for (var j = 0; j < arr[i].length; j++) {
-        ans = ans + arr[i][j];
-      }
-      if (i < 3) {
-        ans = ans + " ";
-      }
-    }
-    return ans;
-  }
-  function convertToStringWithStar(arr) {
-    var ans = "";
-    for (var i = 0; i < arr.length; i++) {
-      for (var j = 0; j < arr[i].length; j++) {
-        if (i === 1 || i === 2) {
-          ans = ans + "*";
-        } else {
-          ans = ans + arr[i][j];
-        }
-      }
-      if (i < 3) {
-        ans = ans + " ";
-      }
-    }
-    return ans;
-  }
-
   if (timeOutFunction) {
     clearTimeout(timeOutFunction);
   }
@@ -479,16 +414,7 @@
   //Lock Function
 
   function lockView() {
-    let numArray = document
-      .getElementById("cardNumber")
-      .getAttribute("value")
-      .split(``)
-      .map((x) => +x);
 
-    // document.getElementById("cardNumberLock").value =document.getElementById('cardNumber').getAttribute("value").split(``).map(x => +x).fill(`*`, 4, 12).join("");
-    document.getElementById("cardNumberLock").value = convertToStringWithStar(
-      sliceInChunks(numArray)
-    );
     document.getElementById("unLock").style.display = "block";
     document.getElementById("lock").style.display = "none";
     //document.getElementById('lockView').style.display = "none";
@@ -502,15 +428,6 @@
   }
   //Un Lock Function
   function unlockView() {
-    let numArray = document
-      .getElementById("cardNumber")
-      .getAttribute("value")
-      .split(``)
-      .map((x) => +x);
-
-    document.getElementById("cardNumber").value = convertToString(
-      sliceInChunks(numArray)
-    );
 
     document.getElementById("unLock").style.display = "none";
     document.getElementById("lock").style.display = "block";
@@ -527,6 +444,7 @@
   function copyTextFromElement(elementID) {
     let element = document.getElementById(elementID); //select the element
     let elementText = element.getAttribute("value"); //get the text content from the element
+    elementText = elementText.replace(/ /g, '');
     console.log(elementText);
     copyText(elementText); //use the copyText function below
   }
